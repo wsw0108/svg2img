@@ -1,0 +1,31 @@
+{
+  "name": "svg2img",
+  "version": "0.1.0",
+  "description": "convert svg to image(png/jpeg) for nodejs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wsw0108/svg2img.git"
+  },
+  "keywords": [
+    "svg",
+    "canvas",
+    "image"
+  ],
+  "author": "wsw <wsw0108@qq.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/wsw0108/svg2img/issues"
+  },
+  "homepage": "https://github.com/wsw0108/svg2img#readme",
+  "dependencies": {
+    "atob": "^2.0.3",
+    "fabric": "^1.6.3"
+  },
+  "devDependencies": {
+    "eslint": "^3.1.1"
+  }
+}
