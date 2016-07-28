@@ -31,7 +31,7 @@ function svg2img(input, opts, callback) {
   } else {
     // assume `input` is String
     if (input.indexOf('data:image/svg+xml;base64,') >= 0) {
-      svg = atob(svg.substring('data:image/svg+xml;base64,'.length));
+      svg = atob(input.substring('data:image/svg+xml;base64,'.length));
     } else if (input.indexOf('<svg') >= 0) {
       svg = input;
     } else {
