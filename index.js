@@ -29,7 +29,9 @@ function svg2img(input, options, callback) {
     canvas.setWidth(width);
     canvas.setHeight(height);
     var ctx = canvas.getContext('2d');
-    ctx.scale(width / info.width, height / info.height);
+    var scale_x = info.width ? (width / info.width) : 1,
+        scale_y = info.height ? (height / info.height) : 1;
+    ctx.scale(scale_x, scale_y);
     var obj = fabric.util.groupSVGElements(objects, options);
     canvas.add(obj);
     canvas.renderAll();
