@@ -15,7 +15,7 @@ function svg2img(input, options, callback) {
     callback = options;
     options = {};
   }
-  var canvas = new fabric.createCanvasForNode();
+  var canvas = fabric.createCanvasForNode();
   var svg;
   var isUrl = false;
   function cb(objects, info) {
@@ -32,7 +32,7 @@ function svg2img(input, options, callback) {
     var scale_x = info.width ? (width / info.width) : 1,
         scale_y = info.height ? (height / info.height) : 1;
     ctx.scale(scale_x, scale_y);
-    var obj = fabric.util.groupSVGElements(objects, options);
+    var obj = fabric.util.groupSVGElements(objects, info);
     canvas.add(obj);
     canvas.renderAll();
     var data = [];
