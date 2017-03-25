@@ -3,10 +3,15 @@
 To convert to JPEG, you must [build](https://github.com/Automattic/node-canvas/wiki)
 [node-canvas](https://github.com/Automattic/node-canvas) with jpeg support.
 
+## Install
+```
+npm install --save node-svg2img
+```
+
 ## Usage
 ```js
 var fs = require('fs');
-var svg2img = require('svg2img');
+var svg2img = require('node-svg2img');
 
 // var input = Buffer.from(...);
 // var input = '<svg>...</svg>';

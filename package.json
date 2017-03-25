@@ -1,6 +1,6 @@
 {
-  "name": "svg2img",
-  "version": "0.1.0",
+  "name": "node-svg2img",
+  "version": "1.0.0",
   "description": "convert svg to image(png/jpeg) for nodejs",
   "main": "index.js",
   "scripts": {
@@ -23,7 +23,7 @@
   "homepage": "https://github.com/wsw0108/svg2img#readme",
   "dependencies": {
     "atob": "^2.0.3",
-    "fabric": "^1.6.3"
+    "fabric": "^1.7.8"
   },
   "devDependencies": {
     "eslint": "^3.1.1"
