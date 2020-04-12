@@ -1,5 +1,6 @@
 'use strict';
 
+var url = require('url');
 var atob = require('atob');
 var fabric = require('fabric').fabric;
 
@@ -15,7 +16,7 @@ function svg2img(input, options, callback) {
     callback = options;
     options = {};
   }
-  var canvas = fabric.createCanvasForNode();
+  var canvas = new fabric.Canvas();
   var svg;
   var isUrl = false;
   function cb(objects, info) {
@@ -61,6 +62,11 @@ function svg2img(input, options, callback) {
     } else if (input.indexOf('<svg') >= 0) {
       svg = input;
     } else {
+      const u = url.parse(input);
+      if (!u.protocol) {
+        // FIXME: default to 'file://'
+        input = 'file://' + input;
+      }
       isUrl = true;
     }
   }
