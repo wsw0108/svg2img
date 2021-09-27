@@ -41,7 +41,7 @@ function svg2img(input, options, callback) {
     if (format === 'png') {
       stream = canvas.createPNGStream();
     } else {
-      stream = canvas.CreateJPEGStream();
+      stream = canvas.createJPEGStream();
     }
     stream.on('data', function (chunk) {
       data.push(chunk);
